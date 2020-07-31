@@ -2,7 +2,7 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH="/home/user/.oh-my-zsh"
+export ZSH="/home/kkaosninja/.oh-my-zsh"
 
 # For tmux 256 color support
 
@@ -87,6 +87,8 @@ source $ZSH/oh-my-zsh.sh
 # else
 #   export EDITOR='mvim'
 # fi
+#
+export EDITOR='vim'
 
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
@@ -100,3 +102,5 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 #
+# Add Go Tree bin dir to PATH
+export PATH=$PATH:/usr/local/go/bin
