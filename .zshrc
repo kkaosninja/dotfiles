@@ -104,3 +104,6 @@ export EDITOR='vim'
 #
 # Add Go Tree bin dir to PATH
 export PATH=$PATH:/usr/local/go/bin
+
+# Add Rust .cargo bin to PATH
+export PATH=$PATH:/home/kkaosninja/.cargo/bin
