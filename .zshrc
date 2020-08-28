@@ -110,3 +110,9 @@ source $ZSH/oh-my-zsh.sh
 
 # Add Go Tree bin dir to PATH
 export PATH=$PATH:/usr/local/go/bin
+
+# For pip and related scripts
+export PATH=$PATH:/home/kkaosninja/.local/bin
+
+# Restore Alsamixer sound settings
+alsactl --file .config/alsactl/asound.state restore
