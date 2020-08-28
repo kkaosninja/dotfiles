@@ -5,7 +5,7 @@ Repo containing config files for my customized Pop OS system
 ***|Description|Links
 ---|---|---
 OS | Pop OS 20.04 LTS | https://pop.system76.com/
-Kernel | Xanmod 5.7 STABLE | https://xanmod.org/
+Kernel | Xanmod 5.8 STABLE | https://xanmod.org/
 Terminal Emulator | Alacritty | https://github.com/alacritty/alacritty
 Shell | Zsh + OhMyZsh + Powerlevel10k | https://ohmyz.sh/, https://github.com/romkatv/powerlevel10k
 
@@ -32,7 +32,7 @@ https://cleanbrowsing.org/guides/dnsovertls
 https://cleanbrowsing.org/guides/dnsoverhttps ( for DoH support)
 
 Chose DNS over TLS as systemd-resolved only supports DoT
-
+Also. DNSSEC turned off due to multiple issues systemd-resolved seems to be having with DNSSEC, even in `allow-downgrade` mode
 
 Links I used to help configure systemd-resolved and NetworkManager:
 
@@ -55,3 +55,15 @@ https://extensions.gnome.org/extension/53/pomodoro/
 https://extensions.gnome.org/extension/906/sound-output-device-chooser/
 
 https://extensions.gnome.org/extension/1460/vitals/
+
+
+Graphics Drivers:
+Pop OS Default NVIDIA Driver version 440.1 does not work with Kernel 5.8.
+So installing latest 450 series drivers from NVIDIA Graphics Drivers team PPA
+`
+sudo add-apt-repository ppa:graphics-drivers/ppa -y
+sudo apt update
+sudo apt install nvidia-driver-450 libnvidia-gl-450 libnvidia-gl-450:i386 libvulkan1 libvulkan1:i386 -y
+`
+
+Above lines ripped off from https://christitus.com/ultimate-linux-gaming-guide/#nvidia-proprietary-driver-install
