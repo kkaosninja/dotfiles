@@ -10,6 +10,10 @@ Terminal Emulator | Alacritty | https://github.com/alacritty/alacritty
 Shell | Zsh + OhMyZsh + Powerlevel10k | https://ohmyz.sh/, https://github.com/romkatv/powerlevel10k
 
 
+**NOTE:** After installation of custom kernel, the symlinks of initrd.old and vmlinuz.old point to the new kernel and initrd and vmlinuz point to the generic kernel. Don't forget to change this. Also dont forget to copy kernel images to /boot/efi/EFI/Pop_OS-{UUID} of both current and previous kernels.
+
+---
+
 DNS
 Requirements => Filters Malicious sites + Support DNSSEC + Support DNS over TLS
 
@@ -19,51 +23,42 @@ Reason -> https://www.skadligkod.se/general-security/phishing/malicious-site-fil
 
 Other Useful Links:
 
-https://quad9.net/faq/#Does_Quad9_implement_DNSSEC
+https://quad9.net/faq/#Does_Quad9_implement_DNSSEC  
+https://quad9.net/faq/#Does_Quad9_support_DNS_over_TLS  
+https://quad9.net/doh-quad9-dns-servers/ (for DoH support)  
+https://cleanbrowsing.org/filters#security  
+https://cleanbrowsing.org/guides/dnsovertls  
+https://cleanbrowsing.org/guides/dnsoverhttps ( for DoH support)  
 
-https://quad9.net/faq/#Does_Quad9_support_DNS_over_TLS
+Chose DoT resolvers as systemd-resolved only supports DoT
 
-https://quad9.net/doh-quad9-dns-servers/ (for DoH support)
+**DNSSEC turned off due to multiple issues systemd-resolved seems to be having with DNSSEC, even in `allow-downgrade` mode**  
 
-https://cleanbrowsing.org/filters#security
+Links I used to help configure systemd-resolved and NetworkManager:  
+https://wiki.archlinux.org/index.php/Systemd-resolved  
+https://andrea.corbellini.name/2020/04/28/ubuntu-global-dns/  
 
-https://cleanbrowsing.org/guides/dnsovertls
-
-https://cleanbrowsing.org/guides/dnsoverhttps ( for DoH support)
-
-Chose DNS over TLS as systemd-resolved only supports DoT
-Also. DNSSEC turned off due to multiple issues systemd-resolved seems to be having with DNSSEC, even in `allow-downgrade` mode
-
-Links I used to help configure systemd-resolved and NetworkManager:
-
-https://wiki.archlinux.org/index.php/Systemd-resolved
-
-https://andrea.corbellini.name/2020/04/28/ubuntu-global-dns/
+---
 
 GNOME Extensions:
+https://extensions.gnome.org/extension/779/clipboard-indicator/  
+https://extensions.gnome.org/extension/945/cpu-power-manager/  
+https://extensions.gnome.org/extension/36/lock-keys/  
+https://extensions.gnome.org/extension/1320/nvidia-gpu-stats-tool/  
+https://extensions.gnome.org/extension/53/pomodoro/  
+https://extensions.gnome.org/extension/906/sound-output-device-chooser/  
+https://extensions.gnome.org/extension/1460/vitals/  
 
-https://extensions.gnome.org/extension/779/clipboard-indicator/
+---
 
-https://extensions.gnome.org/extension/945/cpu-power-manager/
+Graphics Drivers:  
+Pop OS Default NVIDIA Driver version 440.1 does not work with Kernel 5.8.  
+So installing latest 450 series drivers from NVIDIA Graphics Drivers team PPA  
 
-https://extensions.gnome.org/extension/36/lock-keys/
-
-https://extensions.gnome.org/extension/1320/nvidia-gpu-stats-tool/
-
-https://extensions.gnome.org/extension/53/pomodoro/
-
-https://extensions.gnome.org/extension/906/sound-output-device-chooser/
-
-https://extensions.gnome.org/extension/1460/vitals/
-
-
-Graphics Drivers:
-Pop OS Default NVIDIA Driver version 440.1 does not work with Kernel 5.8.
-So installing latest 450 series drivers from NVIDIA Graphics Drivers team PPA
 `
-sudo add-apt-repository ppa:graphics-drivers/ppa -y
-sudo apt update
-sudo apt install nvidia-driver-450 libnvidia-gl-450 libnvidia-gl-450:i386 libvulkan1 libvulkan1:i386 -y
+sudo add-apt-repository ppa:graphics-drivers/ppa -y  
+sudo apt update  
+sudo apt install nvidia-driver-450 libnvidia-gl-450 libnvidia-gl-450:i386 libvulkan1 libvulkan1:i386 -y  
 `
 
 Above lines ripped off from https://christitus.com/ultimate-linux-gaming-guide/#nvidia-proprietary-driver-install
