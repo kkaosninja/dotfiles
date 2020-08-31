@@ -8,6 +8,7 @@ OS | Pop OS 20.04 LTS | https://pop.system76.com/
 Kernel | Xanmod 5.8 STABLE | https://xanmod.org/
 Terminal Emulator | Alacritty | https://github.com/alacritty/alacritty
 Shell | Zsh + OhMyZsh + Powerlevel10k | https://ohmyz.sh/, https://github.com/romkatv/powerlevel10k
+Preferred Font | JetBrains Mono | https://github.com/JetBrains/JetBrainsMono/releases |
 
 
 **NOTE:** After installation of custom kernel, the symlinks of initrd.old and vmlinuz.old point to the new kernel and initrd and vmlinuz point to the generic kernel. Don't forget to change this. Also dont forget to copy kernel images to /boot/efi/EFI/Pop_OS-{UUID} of both current and previous kernels.
