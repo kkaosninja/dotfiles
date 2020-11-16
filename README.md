@@ -4,14 +4,10 @@ Repo containing config files for my customized Pop OS system
 
 ***|Description|Links
 ---|---|---
-OS | Pop OS 20.04 LTS | https://pop.system76.com/
-Kernel | Xanmod 5.8 STABLE | https://xanmod.org/
-Terminal Emulator | Alacritty | https://github.com/alacritty/alacritty
+OS | Kubuntu 20.10 | https://kubuntu.org/
+Kernel | Xanmod 5.9 STABLE | https://xanmod.org/
 Shell | Zsh + OhMyZsh + Powerlevel10k | https://ohmyz.sh/, https://github.com/romkatv/powerlevel10k
-Preferred Font | JetBrains Mono | https://github.com/JetBrains/JetBrainsMono/releases |
-
-
-**NOTE:** After installation of custom kernel, the symlinks of initrd.old and vmlinuz.old point to the new kernel and initrd and vmlinuz point to the generic kernel. Don't forget to change this. Also dont forget to copy kernel images to /boot/efi/EFI/Pop_OS-{UUID} of both current and previous kernels.
+Preferred Font | Meslo Nerd Font | https://github.com/romkatv/powerlevel10k |
 
 ---
 
@@ -48,25 +44,8 @@ For more info
 
 ---
 
-GNOME Extensions:
-https://extensions.gnome.org/extension/779/clipboard-indicator/  
-https://extensions.gnome.org/extension/945/cpu-power-manager/  
-https://extensions.gnome.org/extension/36/lock-keys/  
-https://extensions.gnome.org/extension/1320/nvidia-gpu-stats-tool/  
-https://extensions.gnome.org/extension/53/pomodoro/  
-https://extensions.gnome.org/extension/906/sound-output-device-chooser/  
-https://extensions.gnome.org/extension/1460/vitals/  
-
----
-
-Graphics Drivers:  
-Pop OS Default NVIDIA Driver version 440.1 does not work with Kernel 5.8.  
-So installing latest 450 series drivers from NVIDIA Graphics Drivers team PPA  
-
-`
-sudo add-apt-repository ppa:graphics-drivers/ppa -y  
-sudo apt update  
-sudo apt install nvidia-driver-450 libnvidia-gl-450 libnvidia-gl-450:i386 libvulkan1 libvulkan1:i386 -y  
-`
-
-Above lines ripped off from https://christitus.com/ultimate-linux-gaming-guide/#nvidia-proprietary-driver-install
+KDE Plasma Widgets+Addons:
+- [Netspeed Widget](https://store.kde.org/p/998895)
+- [Simple System Monitor](https://store.kde.org/p/1173509)
+- [Thermal Monitor](https://store.kde.org/p/998915)
+- [Safe Eyes](https://slgobinath.github.io/SafeEyes/)
