@@ -1,5 +1,5 @@
 # Linux Config Files
-Repo containing config files for my customized Pop OS system
+Repo containing config files for my customized Kubuntu system
 
 
 ***|Description|Links
@@ -8,6 +8,7 @@ OS | Kubuntu 20.10 | https://kubuntu.org/
 Kernel | Xanmod 5.9 STABLE | https://xanmod.org/
 Shell | Zsh + OhMyZsh + Powerlevel10k | https://ohmyz.sh/, https://github.com/romkatv/powerlevel10k
 Preferred Font | Meslo Nerd Font | https://github.com/romkatv/powerlevel10k |
+KDE Plasma Theme | Sweet KDE | https://store.kde.org/p/1294729 |
 
 ---
 
